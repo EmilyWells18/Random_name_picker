@@ -1,5 +1,5 @@
 import React from 'react';
-import { NameGenerator } from './features/counter/NameGenerator.js';
+import { NameGenerator } from './features/picker/NameGenerator.js';
 import './App.css';
 
 function App() {
