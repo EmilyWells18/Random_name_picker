@@ -16,12 +16,17 @@
   font-family: 'Courier New', Courier, monospace;
 }
 
+.teamList {
+  float: left;
+}
+
 .button {
   appearance: none;
   background: none;
   font-size: 32px;
-  padding-left: 12px;
-  padding-right: 12px;
+  margin: 6px;
+  padding-left: 6px;
+  padding-right: 5px;
   outline: none;
   border: 2px solid transparent;
   color: rgb(112, 76, 182);
@@ -35,7 +40,7 @@
 .textbox {
   font-size: 32px;
   padding: 2px;
-  width: 64px;
+  width: 200px;
   text-align: center;
   margin-right: 8px;
 }
@@ -48,15 +53,47 @@
   background-color: rgba(112, 76, 182, 0.2);
 }
 
-.asyncButton {
-  composes: button;
+.addBtn .removeBtn{
   position: relative;
   margin-left: 8px;
 }
 
-.asyncButton:after {
+.addBtn {
+  appearance: none;
+  background: none;
+  font-size: 32px;
+  margin: 6px;
+  padding-left: 12px;
+  padding-right: 12px;
+  outline: none;
+  border: 2px solid transparent;
+  color: rgb(80, 182, 76);
+  padding-bottom: 4px;
+  cursor: pointer;
+  background-color: rgba(76, 182, 173, 0.1);
+  border-radius: 2px;
+  transition: all 0.15s;
+}
+
+.removeBtn {
+  appearance: none;
+  background: none;
+  font-size: 32px;
+  margin: 6px;
+  padding-left: 12px;
+  padding-right: 12px;
+  outline: none;
+  border: 2px solid transparent;
+  color: rgb(240, 8, 8);
+  padding-bottom: 4px;
+  cursor: pointer;
+  background-color: rgba(44, 28, 3, 0.1);
+  border-radius: 2px;
+  transition: all 0.15s;
+}
+
+.addBtn:after .removeBtn:after{
   content: "";
-  background-color: rgba(112, 76, 182, 0.15);
   display: block;
   position: absolute;
   width: 100%;
@@ -67,7 +104,7 @@
   transition: width 1s linear, opacity 0.5s ease 1s;
 }
 
-.asyncButton:active:after {
+.removeBtn:active:after .addBtn:active:after{
   width: 0%;
   opacity: 1;
   transition: 0s
